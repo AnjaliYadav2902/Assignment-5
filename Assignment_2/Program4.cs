@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment2
+namespace Assignment_2
 {
-    internal class Program5
+    internal class Program4
     {
         static void Main()
         {
@@ -19,24 +19,27 @@ namespace Assignment2
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
 
-            int[] rowSums = new int[rows];
+            int[] columnSums = new int[cols];
 
 
-            for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
             {
-                for (int j = 0; j < cols; j++)
+                for (int i = 0; i < rows; i++)
                 {
-                    rowSums[i] += matrix[i, j];
+                    columnSums[j] += matrix[i, j];
                 }
             }
 
 
-            for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
             {
-                Console.WriteLine("Sum of elements in row " + (i + 1) + ": " + rowSums[i]);
+                Console.WriteLine("Sum of elements in column " + (j + 1) + ": " + columnSums[j]);
             }
         }
     }
 }
+
+
+
 
 
