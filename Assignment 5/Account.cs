@@ -12,6 +12,7 @@ namespace Assignment1
     {
         int id;
         string accountType;
+
         double balance;
 
         public int Id { get { return id; } set { id = value; } }
